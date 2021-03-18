@@ -4,6 +4,9 @@ pipeline {
 			image 'microsoft/azure-cli'
 		}
 	}
+    parameters {
+        string(defaultValue: "", description: 'Nome Resource Group', name: 'NAME')
+    }
 	stages {
 		stage('LOGIN AZURE') {
 			steps {
